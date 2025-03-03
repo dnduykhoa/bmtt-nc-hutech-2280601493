@@ -1,3 +1,4 @@
+# Viết chuong trình để đếm số lần xuất hiện của mỗi phần tử trong một List
 def dem_so_lan_xuat_hien(lst):
     count_dict = {}
     for item in lst:

@@ -1,3 +1,4 @@
+# Viết chương trình để tạo một Tuple từ một List nhập vào từ bàn phím
 def tao_tuple_tu_list(lst):
     return tuple(lst)
 

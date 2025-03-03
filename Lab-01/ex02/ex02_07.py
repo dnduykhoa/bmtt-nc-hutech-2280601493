@@ -1,3 +1,4 @@
+# Chương trình để nhận các chuỗi đầu vào là những dòng được nhập, sau đó chuyển các dòng thành chữ hoa
 print("Nhập các dòng văn bản (Nhập 'done' để kết thúc):")
 lines = []
 while True:
@@ -5,6 +6,7 @@ while True:
     if line.lower() == "done":
         break
     lines.append(line)
+
 print("\nCác dòng đã nhập sau khi chuyển thành chữ in hoa: ")
 for line in lines:
     print(line.upper())

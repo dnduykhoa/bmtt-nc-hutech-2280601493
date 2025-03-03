@@ -1,3 +1,4 @@
+# Chương trình nhập vào 2 số X, Y từ đó xây dựng mảng 2 chiều. Giá trị của mỗi phần tử tại hàng i, cột j sẽ bằng i*j.
 input_str = input("Nhập X, Y: ")
 dimensions = [int(x) for x in input_str.split(',')]
 rowNum = dimensions[0]
