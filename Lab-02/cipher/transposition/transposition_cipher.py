@@ -12,12 +12,18 @@ class TranspositionCipher:
         return encrypted_text
     
     def decrypt(self, text, key):
-        decrypted_text = [''] * key
+        num_rows = -(-len(text) // key)  
+        num_cols = key
+        num_shaded_boxes = (num_rows * num_cols) - len(text)  
+
+        decrypted_text = [''] * num_rows
         row, col = 0, 0
         for symbol in text:
-            decrypted_text[col] += symbol
-            col += 1
-            if col == key or (col == key - 1 and row >= len(text) % key):
-                col = 0
-                row += 1
+            decrypted_text[row] += symbol
+            row += 1
+            
+            if row == num_rows or (row == num_rows - 1 and col >= num_cols - num_shaded_boxes):
+                row = 0
+                col += 1
+
         return ''.join(decrypted_text)
