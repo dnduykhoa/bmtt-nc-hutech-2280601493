@@ -28,3 +28,11 @@ ssl_socket.connect(server_adress)
 receive_thread = threading.Thread(target=receive_data, args=(ssl_socket,))
 receive_thread.start()
 
+try:
+    while True:
+        message = input("Nhập tin nhắn: ")
+        ssl_socket.send(message.encode('utf-8'))
+except KeyboardInterrupt:
+    pass
+finally:
+    ssl_socket.close()

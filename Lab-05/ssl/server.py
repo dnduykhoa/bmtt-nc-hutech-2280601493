@@ -16,7 +16,7 @@ def handle_client(client_socket):
             data = client_socket.recv(1024)
             if not data: 
                 break
-            print("Nhận: ", data.decode('utf-8'))
+            print("Nhận:", data.decode('utf-8'))
             
             for client in clients:
                 if client != client_socket:
